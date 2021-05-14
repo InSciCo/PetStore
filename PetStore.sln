@@ -1,0 +1,348 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore", "PetStore\PetStore.csproj", "{E426A0C7-2A43-456B-AF17-FEDA06816D0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4334F564-4E23-4583-94FC-8728A4A45291}"
+	ProjectSection(SolutionItems) = preProject
+		LazyStack.yaml = LazyStack.yaml
+		LocalApis.json = LocalApis.json
+		PetStore.yaml = PetStore.yaml
+		README.md = README.md
+		SAM_Review.yaml = SAM_Review.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreClientSDK", "PetStoreClientSDK\PetStoreClientSDK.csproj", "{7746966C-B74D-4F0B-A9D9-899AE8A247BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreSchema", "PetStoreSchema\PetStoreSchema.csproj", "{37DACB0F-E925-40D7-89A1-C5956C8B536F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lambdas", "Lambdas", "{5F29D3A6-8D25-4CA3-A70D-0B8CA5C9CB37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pet", "Lambdas\Pet\Pet.csproj", "{962D82EB-1C84-4888-9491-89A463FDEBCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetSecure", "Lambdas\PetSecure\PetSecure.csproj", "{92B74E53-2EC6-45F7-A19C-6749176AF876}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order", "Lambdas\Order\Order.csproj", "{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderSecure", "Lambdas\OrderSecure\OrderSecure.csproj", "{9A40F254-AEC3-4F75-874D-06527C29079A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{F67C8AAB-EEC6-4CC8-868B-2C4E2E7AEDEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetController", "Controllers\PetController\PetController.csproj", "{4A816560-399E-47D1-92A6-31E72551F397}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetSecureController", "Controllers\PetSecureController\PetSecureController.csproj", "{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderController", "Controllers\OrderController\OrderController.csproj", "{783F7641-CA4D-4A88-AD7A-E601B33D9891}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderSecureController", "Controllers\OrderSecureController\OrderSecureController.csproj", "{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stacks", "Stacks", "{68ADD79D-A915-495E-9C9B-3EDF99EC9A1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev", "Dev", "{8F2CCF19-7290-46EF-A4C3-1C3403B0CD48}"
+	ProjectSection(SolutionItems) = preProject
+		Stacks\Dev\aws-lambda-tools-defaults.json = Stacks\Dev\aws-lambda-tools-defaults.json
+		Stacks\Dev\AwsSettings.json = Stacks\Dev\AwsSettings.json
+		Stacks\Dev\serverless.template = Stacks\Dev\serverless.template
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreRepo", "PetStoreRepo\PetStoreRepo.csproj", "{FFC81893-0B5F-4262-94EA-3844F6057242}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreTests", "PetStoreTests\PetStoreTests.csproj", "{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreConsoleApp", "PetStoreConsoleApp\PetStoreConsoleApp.csproj", "{4A55A911-DBC6-4933-8F82-0ABD7616266C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A4574FFB-B3DA-47EE-9805-6F5EF6A0F33A}"
+	ProjectSection(SolutionItems) = preProject
+		Stacks\Test\serverless.template = Stacks\Test\serverless.template
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prod", "Prod", "{8F74AE34-4D53-4383-B323-5B2DBB34CCC7}"
+	ProjectSection(SolutionItems) = preProject
+		Stacks\Prod\serverless.template = Stacks\Prod\serverless.template
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AwsStack|Any CPU = AwsStack|Any CPU
+		AwsStack|iPhone = AwsStack|iPhone
+		AwsStack|iPhoneSimulator = AwsStack|iPhoneSimulator
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|iPhone.Build.0 = Release|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{E426A0C7-2A43-456B-AF17-FEDA06816D0A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|iPhone.Build.0 = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7746966C-B74D-4F0B-A9D9-899AE8A247BD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|iPhone.Build.0 = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{37DACB0F-E925-40D7-89A1-C5956C8B536F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|iPhone.Build.0 = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{962D82EB-1C84-4888-9491-89A463FDEBCD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|iPhone.Build.0 = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{92B74E53-2EC6-45F7-A19C-6749176AF876}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|iPhone.Build.0 = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|iPhone.Build.0 = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9A40F254-AEC3-4F75-874D-06527C29079A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|iPhone.Build.0 = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4A816560-399E-47D1-92A6-31E72551F397}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|iPhone.Build.0 = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|iPhone.Build.0 = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|iPhone.Build.0 = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|Any CPU.Build.0 = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|iPhone.Build.0 = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{FFC81893-0B5F-4262-94EA-3844F6057242}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|iPhone.Build.0 = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8DAF1DA0-6451-4C97-9D6A-0D13349894DB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.AwsStack|Any CPU.ActiveCfg = AwsStack|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.AwsStack|iPhone.ActiveCfg = AwsStack|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.AwsStack|iPhone.Build.0 = AwsStack|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.AwsStack|iPhoneSimulator.ActiveCfg = AwsStack|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.AwsStack|iPhoneSimulator.Build.0 = AwsStack|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|iPhone.Build.0 = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4A55A911-DBC6-4933-8F82-0ABD7616266C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{962D82EB-1C84-4888-9491-89A463FDEBCD} = {5F29D3A6-8D25-4CA3-A70D-0B8CA5C9CB37}
+		{92B74E53-2EC6-45F7-A19C-6749176AF876} = {5F29D3A6-8D25-4CA3-A70D-0B8CA5C9CB37}
+		{7ED3866D-D9F9-4F9C-A913-009749F4BCFB} = {5F29D3A6-8D25-4CA3-A70D-0B8CA5C9CB37}
+		{9A40F254-AEC3-4F75-874D-06527C29079A} = {5F29D3A6-8D25-4CA3-A70D-0B8CA5C9CB37}
+		{4A816560-399E-47D1-92A6-31E72551F397} = {F67C8AAB-EEC6-4CC8-868B-2C4E2E7AEDEF}
+		{2456CD28-DF12-43C4-A83B-EA9B9238F6D3} = {F67C8AAB-EEC6-4CC8-868B-2C4E2E7AEDEF}
+		{783F7641-CA4D-4A88-AD7A-E601B33D9891} = {F67C8AAB-EEC6-4CC8-868B-2C4E2E7AEDEF}
+		{9A7C8A6A-88B1-44E6-B115-BBE3339385C7} = {F67C8AAB-EEC6-4CC8-868B-2C4E2E7AEDEF}
+		{8F2CCF19-7290-46EF-A4C3-1C3403B0CD48} = {68ADD79D-A915-495E-9C9B-3EDF99EC9A1A}
+		{A4574FFB-B3DA-47EE-9805-6F5EF6A0F33A} = {68ADD79D-A915-495E-9C9B-3EDF99EC9A1A}
+		{8F74AE34-4D53-4383-B323-5B2DBB34CCC7} = {68ADD79D-A915-495E-9C9B-3EDF99EC9A1A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6BE0CCA-2232-4145-A1ED-219EC1D1700F}
+	EndGlobalSection
+EndGlobal
