@@ -4,12 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AWSProjectType>Lambda</AWSProjectType>
-    <Configurations>Debug;Release;AwsStack</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.101" />
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="5.2.0" />
-    <ProjectReference Include="..\..\PetStoreRepo\PetStoreRepo.csproj" />
     <ProjectReference Include="..\..\Controllers\OrderController\OrderController.csproj" />
+    <ProjectReference Include="..\..\Controllers\OrderControllerImpl\OrderControllerImpl.csproj" />
+    <ProjectReference Include="..\..\Controllers\PetControllerImpl\PetControllerImpl.csproj" />
   </ItemGroup>
 </Project>

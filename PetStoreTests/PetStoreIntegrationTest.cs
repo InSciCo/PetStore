@@ -74,13 +74,12 @@ namespace PetStoreTests
             // Simulate collection of Email from user
             Assert.IsTrue(authProcess.CurrentChallenge == AuthChallengeEnum.Email);
             authProcess.Email = email;
-            var verificationCodeSendTime = DateTime.UtcNow; // verificationCode sent after this time
             Thread.Sleep(5000); // Account for a little drive among local and remote clock
             Assert.IsTrue(await authProcess.VerifyEmailAsync() == AuthEventEnum.AuthChallenge);
 
             // Simulate collection of Code from user - AWS Sends the code to the email account
             Assert.IsTrue(authProcess.CurrentChallenge == AuthChallengeEnum.Code);
-            var verificationCode = AuthEmail.GetAuthCode(appConfig, verificationCodeSendTime, email);
+            var verificationCode = AuthEmail.GetAuthCode(appConfig, email);
             Assert.IsNotNull(verificationCode);
             authProcess.Code = verificationCode;
             // Verifying the code finalizes the sign up process

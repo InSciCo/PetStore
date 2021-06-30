@@ -1,19 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Configurations>Debug;Release;AwsStack</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LazyStackDynamoDBRepo" Version="1.0.0" />
+    <ProjectReference Include="..\..\LazyStack\LazyStackDynamoDBRepo\LazyStackDynamoDBRepo.csproj" />
+    <ProjectReference Include="..\PetStoreSchema\PetStoreSchema.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Controllers\OrderController\OrderController.csproj" />
-    <ProjectReference Include="..\Controllers\OrderSecureController\OrderSecureController.csproj" />
-    <ProjectReference Include="..\Controllers\PetController\PetController.csproj" />
-    <ProjectReference Include="..\Controllers\PetSecureController\PetSecureController.csproj" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
