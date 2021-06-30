@@ -15,7 +15,7 @@ Then follow these steps:
 8. Rebuild the solution. PetStoreConsoleApp should not throw an error.
 9. You many now run the PetStoreConsoleApp project.
 
-For a more detailed review of this project, visit the <a href="https://lazystack.io/tutorial/tutorial_overview.html">LazyStack Visual Studio Tutorial</a>.
+For a more detailed review of this project, visit the <a href="https://lazystack.io/tutorial/tutorial_intro.html">LazyStack Visual Studio Tutorial</a>.
 
 
 

@@ -3,13 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore", "PetStore\PetStore.csproj", "{B3C9D1D3-7CD3-4F23-BDDC-74205B66AD25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore", "PetStore\PetStore.csproj", "{B3C9D1D3-7CD3-4F23-BDDC-74205B66AD25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D61DA96-08B4-44AB-973C-146E70A3EFD3}"
 	ProjectSection(SolutionItems) = preProject
 		LazyStack.yaml = LazyStack.yaml
 		LocalApis.json = LocalApis.json
 		PetStore.yaml = PetStore.yaml
+		README.md = README.md
 		SAM_Review.yaml = SAM_Review.yaml
 	EndProjectSection
 EndProject
@@ -52,15 +53,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyStackAuth", "..\LazySta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyStackDynamoDBRepo", "..\LazyStack\LazyStackDynamoDBRepo\LazyStackDynamoDBRepo.csproj", "{13B2FE73-1D37-41E3-BEEE-AD8A46CB56F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStoreRepo", "PetStoreRepo\PetStoreRepo.csproj", "{D4DB0565-5B00-4044-B7A9-2A4AE80A6D82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreRepo", "PetStoreRepo\PetStoreRepo.csproj", "{D4DB0565-5B00-4044-B7A9-2A4AE80A6D82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderControllerImpl", "Controllers\OrderControllerImpl\OrderControllerImpl.csproj", "{42B63586-2F33-4A5D-B947-4A4EFDD87CB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderControllerImpl", "Controllers\OrderControllerImpl\OrderControllerImpl.csproj", "{42B63586-2F33-4A5D-B947-4A4EFDD87CB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetControllerImpl", "Controllers\PetControllerImpl\PetControllerImpl.csproj", "{398A6C63-F41C-4CE3-865A-DA23A75DCD17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetControllerImpl", "Controllers\PetControllerImpl\PetControllerImpl.csproj", "{398A6C63-F41C-4CE3-865A-DA23A75DCD17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStoreTests", "PetStoreTests\PetStoreTests.csproj", "{967C8D23-1384-4AD9-AA8B-55030DDCD052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreTests", "PetStoreTests\PetStoreTests.csproj", "{967C8D23-1384-4AD9-AA8B-55030DDCD052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStoreConsoleApp", "PetStoreConsoleApp\PetStoreConsoleApp.csproj", "{8DCE6EA2-9FAE-4351-B683-07E07CA1AFC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStoreConsoleApp", "PetStoreConsoleApp\PetStoreConsoleApp.csproj", "{8DCE6EA2-9FAE-4351-B683-07E07CA1AFC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
