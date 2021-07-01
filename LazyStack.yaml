@@ -8,15 +8,11 @@ Stacks:
     UriCodeTarget: Debug/netcoreapp3.1
 
   Test:
-    ProfileName: default
-    RegionName: us-east-1
     StackName: PetStoreTest
     Stage: Test 
     UriCodeTarget: Release/netcoreapp3.1
     
   Prod:
-    ProfileName: default
-    RegionName: us-east-1
     StackName: PetStore
     Stage: Prod 
     UriCodeTarget: Release/netcoreapp3.1
