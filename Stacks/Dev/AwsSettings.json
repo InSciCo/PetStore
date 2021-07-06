@@ -1,14 +1,14 @@
 {"Aws": {
   "StackName": "PetStoreDev",
-  "ClientId": "6fan1p9u48haentmv6jj99narv",
-  "UserPoolId": "us-east-1_EpjeqIlcr",
-  "IdentityPoolId": "us-east-1:78bec66a-ddef-4d2c-9d08-6186688be7bd",
+  "ClientId": "29fgulb7olpuitniovscp0lbb",
+  "UserPoolId": "us-east-1_VnBTgrKp9",
+  "IdentityPoolId": "us-east-1:c6b1ff97-9086-42ba-a9aa-91ecf54894d0",
   "Region": "us-east-1",
   "ApiGateways": {
     "HttpApiSecure": {
       "Type": "HttpApi",
       "Scheme": "https",
-      "Id": "6aamu5j37j",
+      "Id": "dx0ebb2o7g",
       "Service": "execute-api",
       "Host": "amazonaws.com",
       "Port": 443,

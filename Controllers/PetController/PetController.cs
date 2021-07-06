@@ -28,6 +28,8 @@ namespace PetController
         /// <returns>successful operation</returns>
         System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<Pet>> UpdatePetAsync(Pet body);
     
+        System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<string>> GetUserAsync();
+    
         /// <summary>Finds Pets by status</summary>
         /// <param name="petStatus">Status values that need to be considered for filter</param>
         /// <returns>successful operation</returns>
@@ -64,9 +66,22 @@ namespace PetController
 
         public string LzUserId {get; set;}
 
-        public virtual void LzGetUserId() {
-            var cognitoIdentity = LzController?.User?.Claims.Where(x => x.Type.Equals("sub")).FirstOrDefault()?.Value;
-            LzUserId = (cognitoIdentity == null) ? "" : cognitoIdentity;
+        public void LzGetUserId()
+        {
+            var handler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+            Microsoft.Extensions.Primitives.StringValues header;
+            var foundHeader = LzController.Request.Headers.TryGetValue("Authorization", out header);
+            if (!foundHeader)
+                foundHeader = LzController.Request.Headers.TryGetValue("LzIdentity", out header);
+            if (foundHeader)
+            {
+                if (handler.CanReadToken(header))
+                {
+                    var jwtToken = handler.ReadJwtToken(header);
+                    var claim = jwtToken.Claims.Where(x => x.Type.Equals("sub")).FirstOrDefault();
+                    LzUserId = claim?.Value;
+                }
+            }
         }
     
     }
@@ -95,6 +110,12 @@ namespace PetController
         public System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<Pet>> UpdatePet([Microsoft.AspNetCore.Mvc.FromBody] Pet body)
         {
             _implementation.LzGetUserId();			return _implementation.UpdatePetAsync(body);
+        }
+    
+        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("pet/user")]
+        public System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<string>> GetUser()
+        {
+            _implementation.LzGetUserId();			return _implementation.GetUserAsync();
         }
     
         /// <summary>Finds Pets by status</summary>

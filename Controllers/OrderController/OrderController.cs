@@ -43,9 +43,22 @@ namespace OrderController
 
         public string LzUserId {get; set;}
 
-        public virtual void LzGetUserId() {
-            var cognitoIdentity = LzController?.User?.Claims.Where(x => x.Type.Equals("sub")).FirstOrDefault()?.Value;
-            LzUserId = (cognitoIdentity == null) ? "" : cognitoIdentity;
+        public void LzGetUserId()
+        {
+            var handler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+            Microsoft.Extensions.Primitives.StringValues header;
+            var foundHeader = LzController.Request.Headers.TryGetValue("Authorization", out header);
+            if (!foundHeader)
+                foundHeader = LzController.Request.Headers.TryGetValue("LzIdentity", out header);
+            if (foundHeader)
+            {
+                if (handler.CanReadToken(header))
+                {
+                    var jwtToken = handler.ReadJwtToken(header);
+                    var claim = jwtToken.Claims.Where(x => x.Type.Equals("sub")).FirstOrDefault();
+                    LzUserId = claim?.Value;
+                }
+            }
         }
     
     }
