@@ -178,7 +178,7 @@ Resources:
     Properties:
       FunctionName:
         Fn::Sub: ${AWS::StackName}-Pet
-      CodeUri: ../../Lambdas/Pet/bin/Release/netcoreapp3.1
+      CodeUri: ../../Lambdas/Pet/bin/Debug/netcoreapp3.1
       Handler: Pet::LambdaFunc.LambdaEntryPoint::FunctionHandlerAsync
       Description: Pet
       Runtime: dotnetcore3.1
@@ -267,7 +267,7 @@ Resources:
     Properties:
       FunctionName:
         Fn::Sub: ${AWS::StackName}-Order
-      CodeUri: ../../Lambdas/Order/bin/Release/netcoreapp3.1
+      CodeUri: ../../Lambdas/Order/bin/Debug/netcoreapp3.1
       Handler: Order::LambdaFunc.LambdaEntryPoint::FunctionHandlerAsync
       Description: Order
       Runtime: dotnetcore3.1

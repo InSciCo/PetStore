@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
     <ProjectReference Include="..\..\PetStoreSchema\PetStoreSchema.csproj" />
   </ItemGroup>
 </Project>
