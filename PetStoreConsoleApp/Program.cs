@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using LazyStackAuth;
 using PetStoreClientSDK;
 using PetStoreSchema.Models;
@@ -28,22 +29,45 @@ namespace PetStoreConsoleApp
                 .AddJsonStream(localApisStream)
                 .Build();
 
-            // Init AuthProvider and AuthProcess
-            var authProvider = new AuthProviderCognito(appConfig); // Implements IAuthProvider interface for AWS Cognito
-            authProcess = new AuthProcess(appConfig, authProvider); // Implements IAuthProcess interface
+            IServiceCollection services = new ServiceCollection();
+            IServiceProvider serviceProvider;
+
+            services.AddSingleton<IConfiguration>(appConfig);
+            // LoginFormat(IConfiguration)
+            services.AddSingleton<ILoginFormat, LoginFormat>();
+
+            // PasswordFormat(IConfiguration)
+            services.AddSingleton<IPasswordFormat, PasswordFormat>();
+
+            // EmailFormat(IConfiguration)
+            services.AddSingleton<IEmailFormat, EmailFormat>();
+
+            // PhoneFormat(IConfiguration)
+            services.AddSingleton<IPhoneFormat, PhoneFormat>();
+
+            // CodeFormat(IConfiguration)
+            services.AddSingleton<ICodeFormat, CodeFormat>();
+
+            // AuthProviderCognito(IConfiguration, ILoginFormat, IPasswordFormat, IEmailFormat, ICodeFormat, IPhoneFormat)
+            services.AddSingleton<IAuthProvider, AuthProviderCognito>();
+
+            // AuthProcess(IConfiguration, IAuthProvider)
+            services.AddSingleton<IAuthProcess, AuthProcess>(); // depends on IConfiguration, IAuthProvider
+
+            serviceProvider = services.BuildServiceProvider();
+
+            var authProvider = serviceProvider.GetService<IAuthProvider>() as AuthProviderCognito;
+            var authProcess = serviceProvider.GetService<IAuthProcess>();
+            var lzHttpClient = new LzHttpClient(appConfig, authProvider, "Local");
+            // Init PetStore library -- provides easy to use calls against AWS ApiGateways
+            var petStore = new PetStore(lzHttpClient);
 
             // Ask the user if they want to use LocalApi Controller Calls
             // Note that this does not influence calls to Cognito for authentication
             Console.WriteLine("Welcome to the PetStoreConsoleApp program");
             Console.Write("Use LocalApi? y/n:");
             var useLocalApi = Console.ReadLine();
-            var localApi = useLocalApi.Equals("y", StringComparison.OrdinalIgnoreCase) ? "Local" : null; 
-
-            // Init LzHttpClient -- A HttpClient that knows how to securly communication with AWS
-            var lzHttpClient = new LzHttpClient(appConfig, authProvider, localApi); 
-
-            // Init PetStore library -- provides easy to use calls against AWS ApiGateways
-            var petStore = new PetStore(lzHttpClient); 
+            lzHttpClient.UseLocalApi = useLocalApi.Equals("Y", StringComparison.OrdinalIgnoreCase);
 
             var input = string.Empty;
             var alertMsg = string.Empty;
@@ -111,7 +135,8 @@ namespace PetStoreConsoleApp
                             Console.WriteLine("5. Seed Pets data");
                             Console.WriteLine("6. Get Pet 1");
                             Console.WriteLine("7. See Available Pets");
-                            Console.WriteLine("8. Quit");
+                            Console.WriteLine("8. GetUserId");
+                            Console.WriteLine("9. Quit");
                             Console.Write(">");
                             input = Console.ReadLine();
                             switch(input)
@@ -167,6 +192,17 @@ namespace PetStoreConsoleApp
                                     }
                                     break;
                                 case "8":
+                                    try
+                                    {
+                                        var userId = await petStore.GetUserAsync();
+                                        Console.WriteLine($"UserId={userId}");
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine($"Could not get userId. {e.Message}");
+                                    }
+                                    break;
+                                case "9":
                                     return; // exit program
                                 default:
                                     Console.WriteLine("Sorry, didn't understand that input. Please try again.");

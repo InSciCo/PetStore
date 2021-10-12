@@ -216,6 +216,13 @@ Resources:
               Ref: HttpApiSecure
             Path: /pet
             Method: PUT
+        GetUser:
+          Type: HttpApi
+          Properties:
+            ApiId:
+              Ref: HttpApiSecure
+            Path: /pet/user
+            Method: GET
         FindPetsByStatus:
           Type: HttpApi
           Properties:

@@ -18,7 +18,7 @@ namespace PetStoreSchema.Models
     using System = global::System;
 
  
-    [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.10.1.0 (NJsonSchema v10.3.3.0 (Newtonsoft.Json v12.0.0.2))")]
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.13.2.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v12.0.0.2))")]
     public partial class ApiException : System.Exception
     {
         public int StatusCode { get; private set; }
@@ -31,7 +31,7 @@ namespace PetStoreSchema.Models
             : base(message + "\n\nStatus: " + statusCode + "\nResponse: \n" + ((response == null) ? "(null)" : response.Substring(0, response.Length >= 512 ? 512 : response.Length)), innerException)
         {
             StatusCode = statusCode;
-            Response = response; 
+            Response = response;
             Headers = headers;
         }
 
@@ -41,7 +41,7 @@ namespace PetStoreSchema.Models
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.10.1.0 (NJsonSchema v10.3.3.0 (Newtonsoft.Json v12.0.0.2))")]
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.13.2.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v12.0.0.2))")]
     public partial class ApiException<TResult> : ApiException
     {
         public TResult Result { get; private set; }

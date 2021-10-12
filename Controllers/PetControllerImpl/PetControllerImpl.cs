@@ -20,7 +20,7 @@ namespace PetControllerImpl
         private IPetRepo petRepo;
 
         Controller IPetController.LzController { get; set; }
-        string IPetController.LzUserId { get; set; }
+        public string LzUserId { get; set; }
 
         public async Task<ActionResult<Pet>> AddPetAsync(Pet body)
         {
@@ -67,6 +67,10 @@ namespace PetControllerImpl
             return await petRepo.UpdatePetAsync(body);
         }
 
-
+        public async Task<ActionResult<string>> GetUserAsync()
+        {
+            await Task.Delay(0);
+            return LzUserId;
+        }
     }
 }

@@ -9,8 +9,5 @@
     <ProjectReference Include="..\PetStoreSchema\PetStoreSchema.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
 
 </Project>

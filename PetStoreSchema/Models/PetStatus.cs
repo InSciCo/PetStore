@@ -19,7 +19,7 @@ namespace PetStoreSchema.Models
 
      
     /// <summary>pet status in the store</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.3.3.0 (Newtonsoft.Json v12.0.0.2)")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.2)")]
     public enum PetStatus
     {
         [System.Runtime.Serialization.EnumMember(Value = @"available")]

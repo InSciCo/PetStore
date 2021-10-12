@@ -36,7 +36,25 @@ namespace PetStoreTests
             IServiceProvider serviceProvider;
 
             services.AddSingleton<IConfiguration>(appConfig);
-            services.AddSingleton<IAuthProvider, AuthProviderCognito>(); // depends on IConfiguration
+            // LoginFormat(IConfiguration)
+            services.AddSingleton<ILoginFormat, LoginFormat>();
+
+            // PasswordFormat(IConfiguration)
+            services.AddSingleton<IPasswordFormat, PasswordFormat>();
+
+            // EmailFormat(IConfiguration)
+            services.AddSingleton<IEmailFormat, EmailFormat>();
+
+            // PhoneFormat(IConfiguration)
+            services.AddSingleton<IPhoneFormat, PhoneFormat>();
+
+            // CodeFormat(IConfiguration)
+            services.AddSingleton<ICodeFormat, CodeFormat>();
+
+            // AuthProviderCognito(IConfiguration, ILoginFormat, IPasswordFormat, IEmailFormat, ICodeFormat, IPhoneFormat)
+            services.AddSingleton<IAuthProvider, AuthProviderCognito>();
+
+            // AuthProcess(IConfiguration, IAuthProvider)
             services.AddSingleton<IAuthProcess, AuthProcess>(); // depends on IConfiguration, IAuthProvider
 
             serviceProvider = services.BuildServiceProvider();
@@ -74,6 +92,7 @@ namespace PetStoreTests
             // Simulate collection of Email from user
             Assert.IsTrue(authProcess.CurrentChallenge == AuthChallengeEnum.Email);
             authProcess.Email = email;
+            var verificationCodeSendTime = DateTime.UtcNow; // verificationCode sent after this time
             Thread.Sleep(5000); // Account for a little drive among local and remote clock
             Assert.IsTrue(await authProcess.VerifyEmailAsync() == AuthEventEnum.AuthChallenge);
 
