@@ -72,6 +72,15 @@ ProjectOptions:
   ControllerProjects:
     PackageReferences:
       System.IdentityModel.Tokens.Jwt: ''
+  TypeScriptClients:
+    Axios:
+      TypeScriptGeneratorSettings:
+        ExtensionCode: LzClientBaseAxios.ts_tpl
+      Template: Axios
+      UseTransformOptionsMethod: true
+      ClassName: PetStore
+      ClientBaseClass: LzClientBaseAxios
+      ConfigurationClass: any
   PetStoreClientSDK:
     Properties:
       DocumentationFile: bin\$(Configuration)\$(TargetFramework)\PetStoreClientSDK.xml
@@ -104,6 +113,38 @@ ApiTagMap:
   - order
   - pet
 AwsResources:
+  HttpApiSecure:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: Dev
+      Auth:
+        Authorizers:
+          OpenIdAuthorizer:
+            IdentitySource: $request.header.Authorization
+            JwtConfiguration:
+              issuer:
+                Fn::Sub: https://cognito-idp.${AWS::Region}.amazonaws.com/${UserPool}
+              audience:
+              - Ref: UserPoolClient
+        DefaultAuthorizer: OpenIdAuthorizer
+      CorsConfiguration:
+        AllowOrigins:
+        - https://*
+        AllowHeaders:
+        - Authorization
+        - '*'
+        AllowMethods:
+        - GET
+        - HEAD
+        - PUT
+        - OPTIONS
+        - POST
+        - DELETE
+        ExposeHeaders:
+        - Date
+        - x-api-id
+        MaxAge: 600
+        AllowCredentials: false
   LZDDB01:
     Type: AWS::DynamoDB::Table
     Properties:

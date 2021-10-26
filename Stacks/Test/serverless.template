@@ -4,7 +4,7 @@ Resources:
   HttpApiSecure:
     Type: AWS::Serverless::HttpApi
     Properties:
-      StageName: Test
+      StageName: Dev
       Auth:
         Authorizers:
           OpenIdAuthorizer:
@@ -15,6 +15,24 @@ Resources:
               audience:
               - Ref: UserPoolClient
         DefaultAuthorizer: OpenIdAuthorizer
+      CorsConfiguration:
+        AllowOrigins:
+        - https://*
+        AllowHeaders:
+        - Authorization
+        - '*'
+        AllowMethods:
+        - GET
+        - HEAD
+        - PUT
+        - OPTIONS
+        - POST
+        - DELETE
+        ExposeHeaders:
+        - Date
+        - x-api-id
+        MaxAge: 600
+        AllowCredentials: false
   UserPool:
     Type: AWS::Cognito::UserPool
     Properties:
