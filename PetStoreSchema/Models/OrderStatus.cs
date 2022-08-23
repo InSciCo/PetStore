@@ -17,20 +17,23 @@ namespace PetStoreSchema.Models
 {
     using System = global::System;
 
-     
-    /// <summary>Order Status</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
+ 
+    /// <summary>
+    /// Order Status
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.1.0))")]
     public enum OrderStatus
     {
+
         [System.Runtime.Serialization.EnumMember(Value = @"placed")]
         Placed = 0,
-    
+
         [System.Runtime.Serialization.EnumMember(Value = @"approved")]
         Approved = 1,
-    
+
         [System.Runtime.Serialization.EnumMember(Value = @"delivered")]
         Delivered = 2,
-    
+
     }
 
 }

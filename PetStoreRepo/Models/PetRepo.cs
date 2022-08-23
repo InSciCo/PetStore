@@ -13,7 +13,7 @@ namespace PetStoreRepo.Models
 {
     public class PetEnvelope : DataEnvelope<Pet>
     {
-        protected override void SetDbRecordFromEnvelopeInstance()
+        public override void SealEnvelope()
         {
             // Set the Envelope Key fields from the EntityInstance data
             TypeName = "Pet.v1.0.0";
@@ -22,7 +22,7 @@ namespace PetStoreRepo.Models
             SK = $"Pet:{EntityInstance.Id}"; // sort/range key
 
             // The base method copies information from the envelope keys into the dbRecord
-            base.SetDbRecordFromEnvelopeInstance();
+            base.SealEnvelope();
         }
     }
 

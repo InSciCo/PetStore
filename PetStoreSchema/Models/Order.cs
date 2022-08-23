@@ -18,49 +18,178 @@ namespace PetStoreSchema.Models
     using System = global::System;
 
  
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class Order 
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.1.0))")]
+    public partial class Order : System.ComponentModel.INotifyPropertyChanged
     {
+        private long _id;
+        private string _userId;
+        private long _petId;
+        private int _quantity;
+        private System.DateTimeOffset _shipDate;
+        private OrderStatus _orderStatus;
+        private bool _complete = false;
+        private long _createUtcTick;
+        private long _updateUtcTick;
+
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long Id { get; set; }
-    
-        /// <summary>Cognito Identity Id of clerk entering order</summary>
+        public long Id
+        {
+            get { return _id; }
+
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Cognito Identity Id of clerk entering order
+        /// </summary>
         [Newtonsoft.Json.JsonProperty("userId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string UserId { get; set; }
-    
+        public string UserId
+        {
+            get { return _userId; }
+
+            set
+            {
+                if (_userId != value)
+                {
+                    _userId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("petId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long PetId { get; set; }
-    
+        public long PetId
+        {
+            get { return _petId; }
+
+            set
+            {
+                if (_petId != value)
+                {
+                    _petId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("quantity", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Quantity { get; set; }
-    
+        public int Quantity
+        {
+            get { return _quantity; }
+
+            set
+            {
+                if (_quantity != value)
+                {
+                    _quantity = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("shipDate", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset ShipDate { get; set; }
-    
-        /// <summary>Order Status</summary>
+        public System.DateTimeOffset ShipDate
+        {
+            get { return _shipDate; }
+
+            set
+            {
+                if (_shipDate != value)
+                {
+                    _shipDate = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Order Status
+        /// </summary>
         [Newtonsoft.Json.JsonProperty("orderStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public OrderStatus OrderStatus { get; set; }
-    
+        public OrderStatus OrderStatus
+        {
+            get { return _orderStatus; }
+
+            set
+            {
+                if (_orderStatus != value)
+                {
+                    _orderStatus = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("complete", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Complete { get; set; } = false;
-    
+        public bool Complete
+        {
+            get { return _complete; }
+
+            set
+            {
+                if (_complete != value)
+                {
+                    _complete = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("createUtcTick", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long CreateUtcTick { get; set; }
-    
+        public long CreateUtcTick
+        {
+            get { return _createUtcTick; }
+
+            set
+            {
+                if (_createUtcTick != value)
+                {
+                    _createUtcTick = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("updateUtcTick", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long UpdateUtcTick { get; set; }
-    
+        public long UpdateUtcTick
+        {
+            get { return _updateUtcTick; }
+
+            set
+            {
+                if (_updateUtcTick != value)
+                {
+                    _updateUtcTick = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
-    
+
         [Newtonsoft.Json.JsonExtensionData]
         public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
         {
             get { return _additionalProperties; }
             set { _additionalProperties = value; }
         }
-    
-    
+
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        }
     }
 
 }

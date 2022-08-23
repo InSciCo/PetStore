@@ -9,7 +9,7 @@ Resources:
   HttpApiSecure:
     Type: AWS::Serverless::HttpApi
     Properties:
-      StageName: Dev
+      StageName: __StageName__
       Auth:
         Authorizers:
           OpenIdAuthorizer:
@@ -20,24 +20,6 @@ Resources:
               audience:
               - Ref: UserPoolClient
         DefaultAuthorizer: OpenIdAuthorizer
-      CorsConfiguration:
-        AllowOrigins:
-        - https://*
-        AllowHeaders:
-        - Authorization
-        - '*'
-        AllowMethods:
-        - GET
-        - HEAD
-        - PUT
-        - OPTIONS
-        - POST
-        - DELETE
-        ExposeHeaders:
-        - Date
-        - x-api-id
-        MaxAge: 600
-        AllowCredentials: false
   UserPool:
     Type: AWS::Cognito::UserPool
     Properties:
@@ -204,7 +186,7 @@ Resources:
       CodeUri: ../../Lambdas/Pet/bin/__UriCodeTarget__
       Handler: Pet::LambdaFunc.LambdaEntryPoint::FunctionHandlerAsync
       Description: Pet
-      Runtime: dotnetcore3.1
+      Runtime: dotnet6
       MemorySize: 256
       Timeout: 30
       Tracing: Active
@@ -300,7 +282,7 @@ Resources:
       CodeUri: ../../Lambdas/Order/bin/__UriCodeTarget__
       Handler: Order::LambdaFunc.LambdaEntryPoint::FunctionHandlerAsync
       Description: Order
-      Runtime: dotnetcore3.1
+      Runtime: dotnet6
       MemorySize: 256
       Timeout: 30
       Tracing: Active

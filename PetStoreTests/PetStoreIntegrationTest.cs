@@ -71,7 +71,7 @@ namespace PetStoreTests
             // ex: me999@gmai.com becomes me999+2020-10-20-25-96@gmail.com
             // This avoids AWS complaining that the email already exists
             // These are one-time use aliases and Cognito accounts
-            var email = appConfig["Gmail:Email"];
+            var email = appConfig["EmailAccount:Email"];
             var emailParts = email.Split("@");
             email = emailParts[0] + "+" + login + "@" + emailParts[1];
 

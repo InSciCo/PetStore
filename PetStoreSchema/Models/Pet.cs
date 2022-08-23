@@ -17,46 +17,160 @@ namespace PetStoreSchema.Models
 {
     using System = global::System;
 
-     
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class Pet 
+ 
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.1.0))")]
+    public partial class Pet : System.ComponentModel.INotifyPropertyChanged
     {
+        private long _id;
+        private Category _category;
+        private string _name;
+        private System.Collections.Generic.ICollection<string> _photoUrls = new System.Collections.ObjectModel.Collection<string>();
+        private System.Collections.Generic.ICollection<Tag> _tags;
+        private PetStatus _petStatus;
+        private long _createUtcTick;
+        private long _updateUtcTick;
+
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long Id { get; set; }
-    
+        public long Id
+        {
+            get { return _id; }
+
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("category", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Category Category { get; set; }
-    
+        public Category Category
+        {
+            get { return _category; }
+
+            set
+            {
+                if (_category != value)
+                {
+                    _category = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Always)]
-        public string Name { get; set; }
-    
+        public string Name
+        {
+            get { return _name; }
+
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("photoUrls", Required = Newtonsoft.Json.Required.Always)]
-        public System.Collections.Generic.ICollection<string> PhotoUrls { get; set; } = new System.Collections.ObjectModel.Collection<string>();
-    
+        public System.Collections.Generic.ICollection<string> PhotoUrls
+        {
+            get { return _photoUrls; }
+
+            set
+            {
+                if (_photoUrls != value)
+                {
+                    _photoUrls = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("tags", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Tag> Tags { get; set; }
-    
-        /// <summary>pet status in the store</summary>
+        public System.Collections.Generic.ICollection<Tag> Tags
+        {
+            get { return _tags; }
+
+            set
+            {
+                if (_tags != value)
+                {
+                    _tags = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        /// <summary>
+        /// pet status in the store
+        /// </summary>
         [Newtonsoft.Json.JsonProperty("petStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public PetStatus PetStatus { get; set; }
-    
+        public PetStatus PetStatus
+        {
+            get { return _petStatus; }
+
+            set
+            {
+                if (_petStatus != value)
+                {
+                    _petStatus = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("createUtcTick", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long CreateUtcTick { get; set; }
-    
+        public long CreateUtcTick
+        {
+            get { return _createUtcTick; }
+
+            set
+            {
+                if (_createUtcTick != value)
+                {
+                    _createUtcTick = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         [Newtonsoft.Json.JsonProperty("updateUtcTick", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long UpdateUtcTick { get; set; }
-    
+        public long UpdateUtcTick
+        {
+            get { return _updateUtcTick; }
+
+            set
+            {
+                if (_updateUtcTick != value)
+                {
+                    _updateUtcTick = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
-    
+
         [Newtonsoft.Json.JsonExtensionData]
         public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
         {
             get { return _additionalProperties; }
             set { _additionalProperties = value; }
         }
-    
-    
+
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        }
     }
 
 }

@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\PetStoreRepo\PetStoreRepo.csproj" />
-    <ProjectReference Include="..\OrderController\OrderController.csproj" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\..\PetStoreRepo\PetStoreRepo.csproj" />
+		<ProjectReference Include="..\OrderController\OrderController.csproj" />
+	</ItemGroup>
 </Project>
